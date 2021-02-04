@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>"SyntaxError: Unexpected EOF while Parsing error" Solution Guide</title>
+	<link rel="stylesheet" href="fontawesome/css/all.min.css"> <!-- https://fontawesome.com/ -->
+	<link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap" rel="stylesheet"> <!-- https://fonts.google.com/ -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/templatemo-xtra-blog.css" rel="stylesheet">
+
+</head>
+<body>
+	<header class="tm-header" id="tm-header">
+        <div class="tm-header-wrapper">
+            <button class="navbar-toggler" type="button" aria-label="Toggle navigation">
+                <i class="fas fa-bars"></i>
+            </button>
+            <div class="tm-site-header">
+                <div class="mb-3 mx-auto tm-site-logo"><i class="fas fa-times fa-2x"></i></div>            
+                <h1 class="text-center">Gora Blog</h1>
+            </div>
+            <nav class="tm-nav" id="tm-nav">            
+                <ul>
+                    <li class="tm-nav-item"><a href="index.html" class="tm-nav-link">
+                        <i class="fas fa-home"></i>
+                        Blog Home
+                    </a></li>
+                    <li class="tm-nav-item active"><a href="post.html" class="tm-nav-link">
+                        <i class="fas fa-pen"></i>
+                        Single Post
+                    </a></li>
+                    <li class="tm-nav-item"><a href="about.html" class="tm-nav-link">
+                        <i class="fas fa-users"></i>
+                        About Gora
+                    </a></li>
+                    <li class="tm-nav-item"><a href="contact.html" class="tm-nav-link">
+                        <i class="far fa-comments"></i>
+                        Contact Us
+                    </a></li>
+                </ul>
+            </nav>
+            <div class="tm-mb-65">
+                <a href="https://facebook.com/gorablog" target="_blank" class="tm-social-link">
+                    <i class="fab fa-facebook tm-social-icon"></i>
+                </a>
+                <a href="https://twitter.com/gorablog" target="_blank" class="tm-social-link">
+                    <i class="fab fa-twitter tm-social-icon"></i>
+                </a>
+                <a href="https://linkedin.com/in/godwin-orabuego-a2aa42191" target="_blank" class="tm-social-link">
+                    <i class="fab fa-linkedin tm-social-icon"></i>
+                </a>
+            </div>
+            <p class="tm-mb-80 pr-5 text-white">
+                Gora Blog is a well researched, educative and interactive DIY (Do It Yourself) blog. Our topics of interest range from Technology, Politics, Finance/Money Management, Sports, General Lifestyle and Health. 
+            </p>
+        </div>
+    </header>
+    <div class="container-fluid">
+        <main class="tm-main">
+            <!-- Search form -->
+            <div class="row tm-row">
+                <div class="col-12">
+                    <form method="GET" class="form-inline tm-mb-80 tm-search-form">                
+                        <input class="form-control tm-search-input" name="query" type="text" placeholder="Search..." aria-label="Search">
+                        <button class="tm-search-button" type="submit">
+                            <i class="fas fa-search tm-search-icon" aria-hidden="true"></i>
+                        </button>                                
+                    </form>
+                </div>                
+            </div>            
+            <div class="row tm-row">
+                <div class="col-lg-8 tm-post-col">
+                    <div class="tm-post-full">                    
+                        <div class="mb-4">
+                            <h2 class="pt-2 tm-color-primary tm-post-title">Python “SyntaxError: unexpected EOF while parsing error” Solution Guide</h2>
+                            <p class="tm-mb-40">posted by Admin Goddy Ora on Febuary 2nd, 2021</p>
+                             <img src="img/image(3).jpg" alt="Image" class="mb-3 img-fluid"> 
+                            <br>
+                            <br>
+                            <p>
+Have you spent a tangible amount of time working on your python code and yet every time you press the run button, an error message keeps popping out - "SyntaxError: unexpected EOF while parsing"? Don't panic yet, for we have put up a well tailored piece that addresses the common causes of this particular error and their corresponding solution. <br> <br>
+In general, Python as a statically typed language is very strict with its use of syntax hence; a misuse of the recommended syntax format would result to varying degree of error messages termed "SyntaxError".
+The unexpected EOF error type is a subset of SyntaxError and it occurs whenever the Python interpreter reaches the end of your program before all the code blocks in it have been executed. The EOF in the error message stands for “End of File” implying the final point of a python file has been reached. The most probable causes that could result to this kind of error include: <br>  
+•   Incomplete 'If' or 'Loop' statements. <br>
+•   Omission or usage of too many parentheses. <br>
+•   Use of ‘try blocks’ without an accompanying ‘except or finally blocks’. <br>
+•   Execution of code in a line by line manner using a python console. <br>
+<br>
+<b style="font-size: 20px" class="pt-2 tm-color-primary tm-post-title">1.  INCOMPLETE ‘IF’ OR ‘LOOP’ STATEMENTS</b> <br>
+‘If statements’ and ‘Loop statements’ like ‘for loops’ or ‘while loops’ require at least one line of code to accompany them for proper code execution. Whenever a ‘loop’ or an ‘if’ statement ends without an addition instruction underneath it in form of a code then a “SyntaxError: unexpected EOF while parsing” error will always come up. By default Python expects a command to be assigned when using the ‘loop’ or ‘if’ function so as to ascertain what to do when the condition in the statement is met or otherwise. Take for instance the incomplete loop statement below:
+<img src="img/image001.png" alt="Image" class="mb-3 img-fluid"> 
+The above program does not tell the Python interpreter what to do with the ‘For statement’ so it returns an unexpected EOF error message when ran on the terminal window as shown below:
+<img src="img/image001b.png" alt="Image" class="mb-3 img-fluid">
+To solve this error, we have to add another line of code to our “for loop” to enclose the statement. Adding a <b>Print()</b> statement to our code that will instruct the Python interpreter to print each of the friends name in the loop statement will provide a solution to our problem.
+<img src="img/image002.png" alt="Image" class="mb-3 img-fluid">
+>>>Terminal
+<img src="img/image002b.png" alt="Image" class="mb-3 img-fluid">
+<br>
+As we can see in our solution, the code no longer brings up an error message rather it uses the loop statement to print out all the friends listed in ‘MyBestFriends’ list while being nested into a formatted string as instructed by the additional code. 
+The same unexpected EOF error could also arise from incompleted ‘If’ and ‘else’ statements like in our example below:
+<img src="img/image003.png" alt="Image" class="mb-3 img-fluid">
+>>>Terminal
+<img src="img/image003b.png" alt="Image" class="mb-3 img-fluid">
+<br>To solve this error, we need to add another line of code to our ‘else’ statement like in the previous case of the “for loop”. Let say for example, we want our program to collect a user’s name via the <b>input()</b> function and store it temporarily as <b>name</b>. After collecting the user’s data (their name), we will use an ‘If’ statement to instruct our program to print an assigned formatted string as the output only if the user’s input matches any of the stored names in the ‘MyBestFriends’ list whereas, if the user’s input doesn’t match any of the stored names then we can print a different output. The solution of our final program is shown below after adding an additional code underneath the ‘else’ statement:
+<img src="img/image004.png" alt="Image" class="mb-3 img-fluid">
+>>>Terminal
+<img src="img/image004b.png" alt="Image" class="mb-3 img-fluid">
+<img src="img/image004a.png" alt="Image" class="mb-3 img-fluid">
+<br>  
+<b style="font-size: 18px" class="pt-2 tm-color-primary tm-post-title">Application of ‘Pass’ function:</b> <br>
+ If you do not have a code in mind to add to your ‘If or loop statement’ then you can make use of the ‘pass’ function as a placeholder to eliminate the error message by simply adding <b>pass</b> to the next line of your code block and the code will return a null value. This technique is mostly employed by developers when building the structure for their programs and once the structure is completed, the ‘pass’ function can then be replaced with the relevant code. In pratice, it tells the Python interpreter that the loop does not have to do anything yet. <br> Let’s consider the first example of our error message using an incomplete ‘for statement’. As we include a ‘pass’ function underneath our ‘for loop’, it automatically provides a solution to our previous error message while returning nothing on the terminal window.
+ <img src="img/image0022.png" alt="Image" class="mb-3 img-fluid">
+>>>Terminal  
+<img src="img/image0022b.png" alt="Image" class="mb-3 img-fluid">
+<br>
+<br>  
+<b style="font-size: 20px" class="pt-2 tm-color-primary tm-post-title">2.  OMISSION OR USAGE OF TOO MANY PARENTHESES: </b> <br>
+Whenever a parentheses “()” is left unclosed due to omission of either the first or the last curved bracket, an unexpected EOF error message comes up after running our program. Uneccessary addition of another one or two (or even more) parentheses in a code block will lead to the same error type. This scenario occurs if the spell/error checker is disabled or unavailable on your Python console hence, such an error goes unnoticed by you thereby creating a bug in your code. Below is an example of an error due to the usage of too many parentheses.
+<img src="img/image005.png" alt="Image" class="mb-3 img-fluid">
+>>>Terminal
+<br>
+<img src="img/image005b.png" alt="Image" class="mb-3 img-fluid" width="5000px">
+<br>
+To eliminate the error message, we simply have to remove one of the two parentheses after the <b>‘print’</b> and our code will run perfectly on the terminal. Let’s check out the solution below:
+<img src="img/image005d.png" alt="Image" class="mb-3 img-fluid" width="5000px">
+<br>
+The same error message will pop out on our terminal window had we omitted one of the closing parentheses. So in Python language, always ensure that all your parantheses are properly closed without any omission or additions.
+<img src="img/image006.png" alt="Image" class="mb-3 img-fluid">
+>>>Terminal
+File  “<string>” , line 2
+<img src="img/image006b.png" alt="Image" class="mb-3 img-fluid">
+<br>
+In summary, to eradicate the error message, simply trace the error description to your code block and add or remove the additional paranthesis(/es) where necessary. This type of error message can also be avoided in the future through the use of spell/error checkers on Python consoles like Pycharm IDE to aid you in debugging your codes and indenting them properly thereby assiting you to avoid most of this basic human errors. Similarly, an omission or presence of extra brackets “[]’ or curly braces “{}” in list and dictionary elements respectively could also result to a similar error message hence; just follow up with the examples for parantheses problems to debug your code.
+<br>
+<br>  
+<b style="font-size: 20px" class="pt-2 tm-color-primary tm-post-title">3.  USE OF ‘TRY’ BLOCKS WITHOUT CORRESPONDING ‘EXCEPT OR FINALLY’ BLOCKS: </b> <br>
+The ‘try and except’ blocks are used in Python to handle exceptions in our program. When the Python interpreter reaches the ‘try’ statement, it executes the code nested underneath the statement as a regular part of the program whereas the code that follows the ‘except’ statement serve as a response to any exceptions from the preceding ‘try block’. So let say we want to try a mathematical solution where (a + b = 5), if our program sums up ‘a’ and ‘b’ together and the answer results to 5; then our ‘try block’ is executed but if the answer isn’t equal to 5; then ‘except block’ will be passed instead. <br>
+A common error in the use of the ‘try and except’ blocks is that only the ‘try block’ is used whereas the ‘except block’ is omitted. When such a scenario occurs, a “SyntaxError: unexpected EOF while parsing” error message will be displayed on the terminal window like in our example below: 
+<img src="img/image007.png" alt="Image" class="mb-3 img-fluid">
+>>>Terminal
+<img src="img/image007b.png" alt="Image" class="mb-3 img-fluid"> <br>
+To solve this error, we need to add either an ‘except block’ or a ‘finally block’ to complete our program. 
+<img src="img/image008.png" alt="Image" class="mb-3 img-fluid">
+>>>Terminal <br>
+<img src="img/image008b.png" alt="Image" class="mb-3 img-fluid" width="5000px">
+<br>
+OR
+<br>
+<img src="img/image009.png" alt="Image" class="mb-3 img-fluid" > 
+>>>Terminal <br>
+<img src="img/image009b.png" alt="Image" class="mb-3 img-fluid" width="5000px">  
+<br>
+Both solutions would eradicate our error message while delivery different results since the ‘except’ and ‘finally’ functions are not exactly the same.
+<br>
+<br>  
+<b style="font-size: 20px" class="pt-2 tm-color-primary tm-post-title">4.  EXECUTION OF CODE IN A LINE BY LINE MANNER USING A PYTHON CONSOLE: </b> <br>
+This mistake mostly occurs when someone executes his/her program line by line whereas it suppose to have been executed as a whole code block. For example this approach of line by line execution might work for single statements like:
+
+<div style="background-color: grey;" class="container-fluid" >
+>>> a = 3 <br>
+>>> print(a**3) <br> <br>
+Terminal>>> 27 <br>
+</div>
+<br>
+<p>Whereas code blocks like ‘for loops’ for instance, running our program line by line would raise a “SyntaxError: Unexpected EOF while parsing” error message. The cause of the error is logically the same with that of  incomplete ‘if or loop’ statements, When the Python interpreter reads the ‘if or loop’ statement as a single line without the additional code was suppose to complete the loop, the same mechanism plays out as in the case of "incomplete loops" and our program returns an unexpected EOF while parsing error like in the example below:
+</p>
+<div style="background-color: grey;" class="container-fluid" >
+>>> for i in range(5): <br> <br>
+                        ^
+Terminal>>> SyntaxError: unexpected EOF while parsing</div>
+<br>
+<p>To avoid this problem, simply enter all the whole code block as a single unit before running it on the terminal like in the example below:</p>
+<div style="background-color: grey;" class="container-fluid" >
+>>> for i in range(5): <br>
+……  print(i, end=’, ‘) <br> <br>
+Terminal>>> 0, 1, 2, 3, 4,</div>
+<br>
+<p>In our solution, we added the <b>print()</b> function underneath the ‘for statement’ before running it on the terminal to eliminate the error hence; making our program bug free.
+<br>  
+<b style="font-size: 20px" class="pt-2 tm-color-primary tm-post-title">FINAL CONCLUSION:</b><br> 
+The “SyntaxError: unexpected EOF while parsing” error message comes up when the Python interpreter reaches the end of a program before every line of code in it has been properly executed. <br>
+To solve this error, first check to make sure that every 'if or loop' statements in your program are completed with an additional instructional code been underneath them. Then check for missing or additional parentheses across all your code blocks to ensure that every parentheses in your program is properly closed.
+<br>
+Next step is to make sure that every 'try' function in your program has an accompanying 'except' or 'finally' function to prevent such error messages from coming up. Lastly do not execute your code line by line on the console rather execute the whole code block as one. 
+<br>
+After following the above instructions, you should be ready to solve this particular syntax error like a professional Python programmer!
+</p>
+
+                        <span class="d-block text-right tm-color-primary">Technology . Programming . Decision Making</span>
+                        </div>
+                        
+                        <!-- Comments -->
+                        <div>
+                            <h2 class="tm-color-primary tm-post-title">Comments</h2>
+                            <hr class="tm-hr-primary tm-mb-45">
+                            <div class="tm-comment tm-mb-45">
+                                <figure class="tm-comment-figure">
+                                    <figcaption class="tm-color-primary text-center">Jossy Ora</figcaption>
+                                </figure>
+                                <div>
+                                    <p>
+                                        I still can't decided if i should settle for mobile app development or AI. I guess i will have to learn both Python and Java!
+                                    </p>                                             
+                                </div>                                
+                            </div>
+                            <hr>
+                            <div class="tm-comment-reply tm-mb-45">
+                                <div class="tm-comment">
+                                    <figure class="tm-comment-figure">
+                                        <figcaption class="tm-color-primary text-center">Rita Amadi</figcaption>    
+                                    </figure>
+                                    <p>
+                                       Great article, thanks Admin for the insight.
+                                    </p>
+                                </div>                                
+                            </div>
+                            <form action="mailto: orabuego@gmail.com" class="mb-5 tm-comment-form">
+                                <h2 class="tm-color-primary tm-post-title mb-4">Your comment</h2>
+                                <div class="mb-4">
+                                <input class="form-control" name="name" type="text" placeholder="Enter Your Name:">
+                                </div>
+                                <div class="mb-4">
+                                    <input placeholder="email address:" class="form-control" name="email" type="text">
+                                </div>
+                                <div class="mb-4">
+                                    <textarea class="form-control" name="message" rows="6"></textarea>
+                                </div>
+                                <div class="text-right">
+                                    <button class="tm-btn tm-btn-primary tm-btn-small">Submit</button>                        
+                                </div>                                
+                            </form>                          
+                        </div>
+                    </div>
+                </div>
+                <aside class="col-lg-4 tm-aside-col">
+                    <div class="tm-post-sidebar">
+                        <hr class="mb-3 tm-hr-primary">
+                        <h2 class="tm-mb-40 tm-post-title tm-color-primary">Related Posts</h2>
+                        <a href="how_to_earn_money_while_coding.html" class="d-block tm-mb-40">
+                            <figure>
+                                <img src="img/image(1).jpg" alt="Image" class="mb-3 img-fluid">
+                                <figcaption class="tm-color-primary">Checkout ways on how to earn money while learning programming</figcaption>
+                            </figure>
+                        </a>
+                        <a href="best_programming_language_to_learn.html" class="d-block tm-mb-40">
+                            <figure>
+                                <img src="img/image(2).jpg" alt="Image" class="mb-3 img-fluid">
+                                <figcaption class="tm-color-primary">Checkout Best Programming Language to learn this 2021: The Beginner's Guide</figcaption>
+                            </figure>
+                        </a>
+                    </div>                    
+                </aside>
+            </div>
+        </main>
+    </div>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/templatemo-script.js"></script>
+</body>
+</html>
